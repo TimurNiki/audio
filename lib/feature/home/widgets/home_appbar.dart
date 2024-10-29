@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:myapp/product/core/constants/app_constants.dart';
+import 'package:myapp/product/core/constants/app_strings.dart';
 
-class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
+final class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({
     super.key,
   });
@@ -14,7 +14,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: IconButton(
         icon: SvgPicture.asset(
           "/assets/icons/menu-variant.svg",
-          color: Colors.black,
+          colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
         ),
         onPressed: () {},
       ),

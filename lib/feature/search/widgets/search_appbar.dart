@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/product/core/constants/app_constants.dart';
+import 'package:myapp/product/core/constants/app_strings.dart';
 
 class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
   const SearchAppBar({

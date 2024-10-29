@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'demo/home.dart';
 import 'feature/auth/sign-up/sign_up_page.dart';
 import 'feature/home/pages/home_page.dart';
 import 'feature/search/pages/search_page.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: HomePageDemo(),
     );
   }
 }
