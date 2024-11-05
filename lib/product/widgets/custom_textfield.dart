@@ -9,13 +9,13 @@ class CustomTextField extends StatelessWidget {
   final Color? borderColor;
 
   const CustomTextField({
-    Key? key,
-     this.controller,
+    super.key,
+    this.controller,
     this.iconPath,
     required this.hintText,
     required this.isPassword,
     this.borderColor, // borderColor parametresini kullanıma ekleyin
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

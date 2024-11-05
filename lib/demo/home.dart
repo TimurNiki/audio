@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/feature/auth/widgets/auth_widgets_import.dart';
+import 'package:myapp/feature/home/widgets/home_widgets_import.dart';
 import 'package:myapp/feature/search/pages/search_page.dart';
-import 'package:myapp/product/core/constants/app_strings.dart';
-import '../feature/home/widgets/category_selector.dart';
-import '../feature/home/widgets/home_appbar.dart';
-import '../feature/home/widgets/home_banner.dart';
-import '../feature/home/widgets/product_item.dart';
-import '../product/model/products_model/products_model.dart';
+import 'package:myapp/product/core/constants/app_constants_import.dart';
+import 'package:myapp/product/model/products_model/featured_products.dart';
 
 class HomePageDemo extends StatefulWidget {
   const HomePageDemo({super.key});
@@ -37,19 +34,14 @@ class _HomePageDemoState extends State<HomePageDemo> {
                 ),
               ),
               const SizedBox(height: 5),
-              Text(
-                AppStrings.whatAreYouLookingForToday,
-                style: GoogleFonts.dmSans(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Text(AppStrings.whatAreYouLookingForToday,
+                  style: AppTextStyles.dmSansBold),
               const SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SearchPage()),
+                    MaterialPageRoute(builder: (context) => const SearchPage()),
                   );
                 },
                 child: const AbsorbPointer(
@@ -86,22 +78,20 @@ class _HomePageDemoState extends State<HomePageDemo> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "Featured Products ",
-                          style: GoogleFonts.dmSans(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        ),
+                        Text(AppStrings.featuredProducts,
+                            style: AppTextStyles.dmSansRegular),
                         TextButton(
                           onPressed: () {},
-                          child: const Text("See all"),
+                          child: Text(
+                            AppStrings.seeAll,
+                            style: AppTextStyles.dmSansRegular.copyWith(
+                              color: AppColors.greyDark,
+                            ),
+                          ),
                         ),
-                       
                       ],
-                      
                     ),
-                    
+                    FeaturedProducts()
                   ],
                 ),
               ),
@@ -112,3 +102,34 @@ class _HomePageDemoState extends State<HomePageDemo> {
     );
   }
 }
+
+
+//   Widget build(BuildContext context) {
+//     return Card(
+//       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+//       child: Container(
+//         width: 150,
+//         padding: EdgeInsets.all(12),
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             Icon(
+//               image,
+//               size: 80, // Placeholder icon size, adjust as needed
+//             ),
+//             SizedBox(height: 16),
+//             Text(
+//               name,
+//               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+//             ),
+//             SizedBox(height: 8),
+//             Text(
+//               price,
+//               style: TextStyle(fontSize: 14, color: Colors.grey[700]),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

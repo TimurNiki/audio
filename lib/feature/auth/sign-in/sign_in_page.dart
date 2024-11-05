@@ -21,7 +21,7 @@ class _SignInPageState extends State<SignInPage> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/signin-image.png"),
+            image: AssetImage("assets/images/audio-onboard.jfif"),
             fit: BoxFit.fill,
           ),
         ),

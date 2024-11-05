@@ -19,8 +19,6 @@ final class AppStrings {
   static const String whatAreYouLookingForToday =
       "What are you looking for today?";
   static const String search = 'Search';
-}
-
-final class AppAssets {
-  static const String signin = 'assets/images/signin-image.png';
+  static const String featuredProducts = "Featured Products";
+  static const String seeAll = "See all";
 }

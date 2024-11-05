@@ -1,9 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'demo/home.dart';
-import 'feature/auth/sign-up/sign_up_page.dart';
-import 'feature/home/pages/home_page.dart';
-import 'feature/search/pages/search_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -16,13 +16,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-     debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-      textTheme: GoogleFonts.dmSansTextTheme(),
+        textTheme: GoogleFonts.dmSansTextTheme(),
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePageDemo(),
+      themeMode: ThemeMode.light,
+      home:  HomePageDemo(),
     );
   }
 }

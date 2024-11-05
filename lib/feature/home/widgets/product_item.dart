@@ -7,11 +7,11 @@ class ProductItem extends StatelessWidget {
   final String? imageUrl; // Now represents the asset image path
 
   const ProductItem({
-    Key? key,
+    super.key,
     required this.name,
     required this.price,
     this.imageUrl,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

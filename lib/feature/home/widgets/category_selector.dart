@@ -14,7 +14,6 @@ class CategorySelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-    
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: List.generate(Category.categories.length, (index) {
@@ -25,14 +24,15 @@ class CategorySelector extends StatelessWidget {
             onTap: () => onCategorySelected(category.name),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8), // Kenarları yuvarlatmak için
+                borderRadius:
+                    BorderRadius.circular(8), // Kenarları yuvarlatmak için
               ),
               padding: const EdgeInsets.all(8), // İçerik için boşluk
               child: Center(
                 child: Text(
                   category.name,
                   style: TextStyle(
-                    color: isSelected ? Colors.green :  Color(0xff7F7F7F),
+                    color: isSelected ? Colors.green : const Color(0xff7F7F7F),
                     fontSize: 14,
                     height: 20 / 14,
                     letterSpacing: 0.2,
