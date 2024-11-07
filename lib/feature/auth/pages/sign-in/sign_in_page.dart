@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../product/core/constants/app_strings.dart';
-import '../sign-in/sign_in_page.dart';
-import '../widgets/auth_widgets_import.dart';
+import 'package:myapp/product/core/constants/app_strings.dart';
+import '../sign-up/sign_up_page.dart';
+import '../../widgets/auth_widgets_import.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignInPageState extends State<SignInPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -29,7 +29,7 @@ class _SignUpPageState extends State<SignUpPage> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment:
-                MainAxisAlignment.start, // Center the content vertically
+                MainAxisAlignment.center, // Center the content vertically
             children: [
               const SizedBox(height: 75), // Top spacing
               Text(
@@ -48,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 100), // Space between title and fields
+              const SizedBox(height: 120), // Space between title and fields
               CustomTextField(
                 controller: _emailController,
                 iconPath: 'assets/icons/mail.svg',
@@ -62,43 +62,31 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: AppStrings.password,
                 isPassword: true,
               ),
-
+              const SizedBox(height: 5),
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  AppStrings.forgotPassword,
+                  style: GoogleFonts.dmSans(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
               const SizedBox(height: 15),
-              const CustomButton(
-                buttonText: AppStrings.signUp,
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: CustomButton(
+                  buttonText: AppStrings.signIn,
+                ),
               ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  GestureDetector(
-                    child: Image.asset(
-                      "assets/images/apple_auth.png",
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  GestureDetector(
-                    child: Image.asset(
-                      "assets/images/facebook_auth.png",
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  GestureDetector(
-                    child: Image.asset(
-                      "assets/images/google_auth.png",
-                    ),
-                  ),
-                ],
-              ),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    AppStrings.alreadyHaveAnAccount,
+                    AppStrings.didntHaveAnyAccount,
                     style: GoogleFonts.dmSans(
                       color: Colors.white,
                       fontSize: 14,
@@ -109,15 +97,16 @@ class _SignUpPageState extends State<SignUpPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignInPage()),
+                            builder: (context) => const SignUpPage()),
                       );
                     },
                     child: Text(
-                      AppStrings.signInHere,
+                      AppStrings.signUpHere,
                       style: GoogleFonts.dmSans(
                         color: const Color(0xFF0ACF83),
                         fontSize: 14,
-                        decoration: TextDecoration.underline,
+                                      decoration: TextDecoration.underline,
+          
                       ),
                     ),
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:myapp/feature/profile/profile_page.dart';
 import 'package:myapp/product/core/constants/app_strings.dart';
 
 final class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -28,10 +29,22 @@ final class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           const Text(AppStrings.audio),
         ],
       ),
-      actions: const [
-        CircleAvatar(
-          backgroundImage: NetworkImage('https://example.com/avatar.jpg'),
-          radius: 15,
+      actions: [
+        GestureDetector(
+          onTap: () {
+            // Navigate to profile page when avatar is tapped
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    ProfilePage(), // Replace with your ProfilePage widget
+              ),
+            );
+          },
+          child: const CircleAvatar(
+            backgroundImage: NetworkImage('https://example.com/avatar.jpg'),
+            radius: 15,
+          ),
         ),
         SizedBox(width: 10), // Add some spacing
       ],

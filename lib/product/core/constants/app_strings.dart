@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 @immutable
 final class AppStrings {
   const AppStrings._();
-  static const String audio = 'Audio';
+  static const String audio = 'AudioHub ';
   static const String sub = "It's modular and designed to last";
   static const String email = "Email";
   static const String password = "Password";
@@ -21,4 +21,6 @@ final class AppStrings {
   static const String search = 'Search';
   static const String featuredProducts = "Featured Products";
   static const String seeAll = "See all";
+  static const String profile = "Profile";
+
 }
