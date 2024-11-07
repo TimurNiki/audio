@@ -1,4 +1,4 @@
-# Audio
+# AudioHub
 
 A Flutter application with a Go backend. 
 
