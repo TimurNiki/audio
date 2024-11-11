@@ -37,7 +37,7 @@ final class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
               context,
               MaterialPageRoute(
                 builder: (context) =>
-                    ProfilePage(), // Replace with your ProfilePage widget
+                    const ProfilePage(), // Replace with your ProfilePage widget
               ),
             );
           },
@@ -46,7 +46,7 @@ final class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             radius: 15,
           ),
         ),
-        SizedBox(width: 10), // Add some spacing
+        const SizedBox(width: 10), // Add some spacing
       ],
     );
   }

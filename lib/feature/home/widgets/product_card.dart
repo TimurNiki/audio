@@ -7,7 +7,10 @@ class ProductCard extends StatelessWidget {
   final String imagePath;
 
   const ProductCard(
-      {required this.name, required this.price, required this.imagePath});
+      {super.key,
+      required this.name,
+      required this.price,
+      required this.imagePath});
 
   @override
   Widget build(BuildContext context) {

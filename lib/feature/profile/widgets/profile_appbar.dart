@@ -15,5 +15,6 @@ final class ProfileAppBar extends StatelessWidget
     );
   }
 
+  @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

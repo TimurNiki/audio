@@ -51,9 +51,9 @@ class ProductItem extends StatelessWidget {
   Widget _buildPlaceholderImage() {
     return Container(
       height: 100,
-      color: Colors.grey[300], // Placeholder color
-      child: const Icon(Icons.image), // Placeholder icon
-      alignment: Alignment.center,
+      color: Colors.grey[300], // Placeholder icon
+      alignment: Alignment.center, // Placeholder color
+      child: const Icon(Icons.image),
     );
   }
 }

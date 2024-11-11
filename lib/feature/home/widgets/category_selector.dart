@@ -25,9 +25,9 @@ class CategorySelector extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius:
-                    BorderRadius.circular(8), // Kenarları yuvarlatmak için
+                    BorderRadius.circular(8), 
               ),
-              padding: const EdgeInsets.all(8), // İçerik için boşluk
+              padding: const EdgeInsets.all(8),
               child: Center(
                 child: Text(
                   category.name,
